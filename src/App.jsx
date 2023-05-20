@@ -1,6 +1,7 @@
 import '../dist/css/main.css'
 import Content from './components/Content'
 import FollowUs from './components/FollowUs'
+import Footer from './components/Footer'
 import Header from './components/Header'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Header/>
     <Content />
     <FollowUs />
+    <Footer />
    </div>
   )
 }

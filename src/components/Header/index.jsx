@@ -1,9 +1,10 @@
 import React from "react";
+import {HiOutlineMenuAlt3} from "react-icons/hi"
 
 const Header = () => {
   const navItems = [
     {
-      id: 1,
+      id: 1, 
       name: "CAREERS",
     },
     {
@@ -36,6 +37,9 @@ const Header = () => {
               {item.name}
             </a>
           ))}
+          <button className="nav-menu-btn">
+            <HiOutlineMenuAlt3 className="btn-icon" />
+          </button>
         </nav>
         <div className="nav-links">
           <a className="nl-signup" href="/#">

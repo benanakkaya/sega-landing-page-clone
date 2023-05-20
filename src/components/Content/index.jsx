@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 
 const Content = () => {
+
+  const [itemCount,setItemCount] = useState(10);
+
   const franchiseList = [
     {
       id: 1,
@@ -411,15 +414,11 @@ const Content = () => {
     },
   ];
 
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500,
-  };
+  const handleItemCount = () => {
+    setItemCount(prev => prev+8);
+  }
+
+
 
   return (
     <main className="content">
@@ -428,6 +427,7 @@ const Content = () => {
           <h2 className="content-title">Our Franchises</h2>
           <div className="franchise-list">
             {franchiseList.map((item) => (
+              item.id <= itemCount &&
               <a href="/#" key={item.id} className="franchise-card">
                 <img
                   className="franchise-image"
@@ -439,7 +439,9 @@ const Content = () => {
             ))}
           </div>
           <div className="button-div">
-            <button className="btn-more">View More</button>
+            {itemCount < franchiseList.length && 
+            <button onClick={handleItemCount} className="btn-more">View More</button>
+         }
           </div>
         </article>
 
@@ -447,22 +449,31 @@ const Content = () => {
           <h2 className="content-title">Our Studios</h2>
 
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              }
             }}
+            slidesPerView={1}
+            spaceBetween={10}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Navigation]}
             className="mySwiper"
           >
             {studioList.map((item) => (
               <SwiperSlide key={item.id} className="slider-item">
+                <a href="/#">
                   <img className="slider-bg" src={item.bg} alt={item.name} />
                   <div className="slider-div">
                     <div className="slider-svg">{item.svg}</div>
                     <h3 className="slider-name">{item.name}</h3>
                   </div>
+                  </a>
               </SwiperSlide>
             ))}
           </Swiper>
