@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", "sans-serif"; }
+  * a {
+    text-decoration: none; }
+
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 200; }
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 67px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px; }
+    @media (max-width: 768px) {
+      .header .container {
+        padding: 16px 30px; } }
+    .header .container .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px; }
+      @media (max-width: 768px) {
+        .header .container .nav {
+          width: 100%;
+          justify-content: space-between; } }
+      .header .container .nav .logo-link {
+        height: 100%;
+        display: flex;
+        align-items: center; }
+        @media (max-width: 768px) {
+          .header .container .nav .logo-link {
+            width: 64px; } }
+      .header .container .nav .nav-item {
+        color: #177ef8; }
+        @media (max-width: 768px) {
+          .header .container .nav .nav-item {
+            display: none; } }
+        .header .container .nav .nav-item:hover {
+          color: #003982; }
+      .header .container .nav .nav-menu-btn {
+        color: #003982;
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 24px;
+        border: none;
+        background-color: white; }
+        .header .container .nav .nav-menu-btn .btn-icon {
+          width: 24px;
+          height: 24px;
+          font-size: 16px;
+          line-height: 24px;
+          background-color: white; }
+        @media (min-width: 768px) {
+          .header .container .nav .nav-menu-btn {
+            display: none; } }
+    @media (max-width: 768px) {
+      .header .container .nav-links {
+        display: none; } }
+    .header .container .nav-links .nl-signup {
+      color: #003982; }
+      .header .container .nav-links .nl-signup:hover {
+        color: #177ef8; }
+
+.content {
+  background-color: #1b3360; }
+  .content .container {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    padding: 112px 67px 67px 67px; }
+    @media (max-width: 768px) {
+      .content .container {
+        padding: 80px 30px 30px 30px; } }
+    .content .container .content-title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      color: white; }
+    .content .container .franchises {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; }
+      .content .container .franchises .franchise-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 56px 32px; }
+        @media (max-width: 768px) {
+          .content .container .franchises .franchise-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px 16px; } }
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .content .container .franchises .franchise-list {
+            grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        .content .container .franchises .franchise-list .franchise-card {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          transition: transform 0.3s ease; }
+          .content .container .franchises .franchise-list .franchise-card .franchise-image {
+            max-height: 279.531px;
+            max-width: 279.531px;
+            border-radius: 8px; }
+          .content .container .franchises .franchise-list .franchise-card .franchise-name {
+            color: #C3E6FF;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700px; }
+          .content .container .franchises .franchise-list .franchise-card:hover {
+            transform: translateY(-10px); }
+      .content .container .franchises .button-div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .content .container .franchises .button-div .btn-more {
+          color: white;
+          background-color: #1b3360;
+          cursor: pointer;
+          padding: 16px 64px;
+          line-height: 16px;
+          font-size: 16px;
+          font-weight: 700;
+          border: 1px solid white;
+          border-radius: 6px; }
+          .content .container .franchises .button-div .btn-more:hover {
+            background-color: #C3E6FF;
+            color: #1b3360; }
+    .content .container .studios {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; }
+      .content .container .studios .swiper {
+        width: 100%;
+        height: 100%; }
+        .content .container .studios .swiper .slider-item {
+          position: relative;
+          border-radius: 10px;
+          display: flex;
+          height: 418.094px;
+          max-width: 384.656px;
+          overflow: hidden; }
+          .content .container .studios .swiper .slider-item:hover .slider-bg {
+            transform: scale(1.1); }
+          .content .container .studios .swiper .slider-item .slider-bg {
+            z-index: -10;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-height: 418.094px;
+            max-width: 384.656px;
+            transition: transform 0.6s ease; }
+          .content .container .studios .swiper .slider-item .slider-div {
+            height: 418.094px;
+            width: 384.656px;
+            padding-bottom: 36px;
+            transition: transform 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-direction: column;
+            gap: 6px;
+            color: white; }
+            .content .container .studios .swiper .slider-item .slider-div:hover {
+              transform: translateY(-10px); }
+
+.follow-us {
+  height: 220px;
+  width: 100%;
+  background-color: #1952A5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  color: white; }
+  .follow-us .follow-us-title {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700; }
+  .follow-us .follow-us-platforms {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px; }
+    @media (max-width: 768px) {
+      .follow-us .follow-us-platforms {
+        gap: 24px; } }
+    .follow-us .follow-us-platforms .follow-us-platform {
+      width: 64px;
+      height: 64px;
+      padding: 16px;
+      border-radius: 8px; }
+      .follow-us .follow-us-platforms .follow-us-platform:hover {
+        outline: white solid 1px; }
+
+.footer {
+  background-color: #00122C; }
+  .footer .container {
+    padding: 67px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px; }
+    @media (max-width: 768px) {
+      .footer .container {
+        padding: 30px; } }
+    .footer .container .footer-bottom {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 144px; }
+      @media (max-width: 768px) {
+        .footer .container .footer-bottom {
+          flex-direction: column;
+          gap: 72px; } }
+      .footer .container .footer-bottom .footer-text {
+        font-size: 12px;
+        line-height: 16px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 0 1 auto;
+        width: 291px; }
+      .footer .container .footer-bottom .footer-link-groups {
+        flex: 4;
+        display: flex;
+        gap: 80px; }
+        @media (max-width: 768px) {
+          .footer .container .footer-bottom .footer-link-groups {
+            flex-direction: column;
+            gap: 20px; } }
+        .footer .container .footer-bottom .footer-link-groups .link-group {
+          display: flex;
+          flex-direction: column; }
+          .footer .container .footer-bottom .footer-link-groups .link-group .group-title {
+            font-weight: 700;
+            line-height: 20px;
+            font-size: 14px;
+            color: white; }
+          .footer .container .footer-bottom .footer-link-groups .link-group .footer-links {
+            display: flex;
+            flex-direction: column; }
+            .footer .container .footer-bottom .footer-link-groups .link-group .footer-links .footer-link {
+              color: white;
+              font-size: 12px;
+              line-height: 16px; }
