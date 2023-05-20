@@ -1,4 +1,4 @@
-import '../dist/css/main.css'
+import './main.css'
 import Content from './components/Content'
 import FollowUs from './components/FollowUs'
 import Footer from './components/Footer'
